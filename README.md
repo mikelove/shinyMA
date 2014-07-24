@@ -4,3 +4,5 @@
   to clicking on points in the first plot
 - the shiny app in `plotMAandCounts/` only works with Bioc devel branch bc it
   uses `DESeq2::plotCounts` which is in the devel branch
+
+<img src="example.png">
