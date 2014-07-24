@@ -1,4 +1,4 @@
-# Reactive plots demos
+# shiny clickable plots
 
 - the shiny app in `mtcars_demo/` is a general example of two plots, which react
   to clicking on points in the first plot
