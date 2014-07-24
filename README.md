@@ -16,3 +16,7 @@ specifically the **clickId** and **hoverId** arguments.
 
 These arguments were suggested and added in this thread:
 https://groups.google.com/d/msg/shiny-discuss/0B8VFC9XK4o/bf_SWVnxi-sJ 
+
+**Next ideas** highlight gene sets
+
+
