@@ -8,6 +8,9 @@ dds <- DESeqDataSetFromMatrix(counts(pasillaGenes),
                               pData(pasillaGenes)[,2:3],
                               ~ condition)
 
+# compare treated vs untreated
+dds$condition <- relevel(dds$condition, "untreated")
+
 # run DESeq
 dds <- DESeq(dds)
 res <- results(dds)
