@@ -10,11 +10,10 @@ shinyServer(function(input, output) {
     par(mar=c(5,5,3,2),cex.lab=2,cex.main=2,cex.axis=1.5)
 
     # MA-plot of all genes
-    plotMA( res, ylim=c( -3,3 ) )
+    plotMA( res, ylim=c( -ymax, ymax ) )
 
     # add circle for the selected point
-    points( res$baseMean[idx], res$log2FoldChange[idx],
-           col="dodgerblue", cex=3, lwd=3 )
+    points( 10^data[idx,1], data[idx,2], col="dodgerblue", cex=3, lwd=3 )
     
   })
 
