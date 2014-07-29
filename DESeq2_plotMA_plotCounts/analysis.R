@@ -1,3 +1,5 @@
+### analysis.R : my additional file ### 
+
 library(DESeq2)
 library(pasilla)
 library(Biobase)
@@ -36,3 +38,4 @@ findClosest <- function(input) {
     which.min(sqdists)
   }
 }
+

@@ -1,3 +1,5 @@
+### server.R : builds the plots and tables ###
+
 library(shiny)
 shinyServer(function(input, output) {
 

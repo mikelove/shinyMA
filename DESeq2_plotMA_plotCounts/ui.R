@@ -1,3 +1,5 @@
+### ui.R : lays out the page ###
+
 library(shiny)
 shinyUI(fluidPage(
   titlePanel("MA-plot + counts plot with shiny"),
