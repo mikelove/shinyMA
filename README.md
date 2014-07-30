@@ -19,4 +19,5 @@ https://groups.google.com/d/msg/shiny-discuss/0B8VFC9XK4o/bf_SWVnxi-sJ
 
 **Next ideas** highlight gene sets
 
-**Issues** need to know the xlim and ylim of the plot and whether log-scale
+**Issues** should use `par("usr")` to know the xlim and ylim of the
+  plot instead of range(data)
