@@ -38,4 +38,3 @@ findClosest <- function(input) {
     which.min(sqdists)
   }
 }
-
