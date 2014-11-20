@@ -1,3 +1,5 @@
+source("analysis.R") # load data and define findClosest function
+
 library(shiny)
 shinyServer(function(input, output) {
   output$myplot1 <- renderPlot({
