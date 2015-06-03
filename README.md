@@ -6,6 +6,8 @@
   the left, and a plot of counts for a single gene on the right. the
   gene is selected by clicking on the MA-plot.
 
+*June 2015: contributions from Andrzej Oles in updating to current shiny syntax*
+
 <img src="example.png">
 
 **Note** (24 July 2014): second demo only works with Bioc devel branch bc it uses
