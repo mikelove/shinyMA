@@ -8,11 +8,13 @@ shinyUI(fluidPage(
   flowLayout(
 
     # the MA-plot
-    plotOutput("plotma", clickId="plotma_click", width=400, height=400),
+    plotOutput("plotma", click="plotma_click", width=400, height=400),
 
     # the counts plot for a single gene
-    plotOutput("plotcounts", width=400, height=400)
+    plotOutput("plotcounts", width=400, height=400),
     
+    # needed for proper page layout
+    cellArgs = list(style="width: 400px;")    
   )
   
 ))
