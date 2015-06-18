@@ -27,3 +27,4 @@ ymax <- 2.5
 data[,2] <- pmin(ymax, pmax(-ymax, data[,2]))
 scale <- c(diff(range(data[,1])), 2*ymax)
 t.data.scaled <- t(data)/scale
+

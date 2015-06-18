@@ -1,14 +1,16 @@
 ### server.R : builds the plots and tables ###
-source("analysis.R")
+#source("analysis.R")
 
 library(shiny)
 shinyServer(function(input, output) {
   idx = NULL
-  xy = reactive(c(log10(input$plotma_click$x), input$plotma_click$y))
+  xy = reactive(c(input$plotma_click$x, input$plotma_click$y))
   observe({
     if (!is.null(xy())) {
       ## find index of the closest point
-      sqdists <- colMeans( (t.data.scaled - xy()/scale )^2 ) 
+      xy.val <- xy()
+      xy.val[1] <- log10(xy.val[1])
+      sqdists <- colSums( (t.data.scaled - xy.val/scale )^2 ) 
       idx <<- which.min(sqdists)  
     }
   })
@@ -21,7 +23,8 @@ shinyServer(function(input, output) {
     # MA-plot of all genes
     plotMA( res, ylim=c( -ymax, ymax ) )
     # add circle for the selected point
-    if (!is.null(idx)) points( data[idx,1], data[idx,2], col="dodgerblue", cex=3, lwd=3 )
+    if (!is.null(idx)) points( 10^data[idx,1], data[idx,2], 
+                               col="dodgerblue", cex=3, lwd=3 )
   })
 
   # counts plot
