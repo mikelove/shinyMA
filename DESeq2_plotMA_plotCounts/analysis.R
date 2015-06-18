@@ -20,7 +20,7 @@ res <- results(dds)
 
 # this object will be used to locate points from click events.
 # take the log of x, so that points are 'close' in the log x axis
-data <- with(res, cbind(baseMean, log2FoldChange))
+data <- with(res, cbind(log10(baseMean), log2FoldChange))
 
 # we set the ylim so need to use
 ymax <- 2.5
