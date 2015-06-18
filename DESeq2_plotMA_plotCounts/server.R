@@ -4,7 +4,7 @@ source("analysis.R")
 library(shiny)
 shinyServer(function(input, output) {
   idx = NULL
-  xy = reactive(c(input$plotma_click$x, input$plotma_click$y))
+  xy = reactive(c(log10(input$plotma_click$x), input$plotma_click$y))
   observe({
     if (!is.null(xy())) {
       ## find index of the closest point
